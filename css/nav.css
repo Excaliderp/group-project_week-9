@@ -1,0 +1,83 @@
+/*
+Nav has three colours: dark, light, accent. Can be found in variables.css.
+
+:root {
+  --nav-color-dark: #3b3f3f;
+  --nav-color-light: #eaf4f4;
+  --nav-color-accent: #6b9080;
+}
+*/
+
+.nav-container {
+  box-sizing: border-box;
+  display: flex;
+  font-family: "Blackout Midnight";
+  justify-content: center;
+}
+
+.nav-list {
+  align-items: center;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 4rem;
+}
+
+.nav-list li {
+  padding: 0.5rem 0;
+}
+
+nav a {
+  border-left: 1px solid var(--nav-color-accent);
+  border-right: 1px solid var(--nav-color-accent);
+  color: var(--nav-color-dark);
+  padding: 8px 24px;
+  width: 100px;
+}
+
+.nav-index {
+  font-size: 24px;
+}
+
+a:active {
+  background-color: var(--nav-color-accent);
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:where(:hover) {
+  font-family: "Blackout Sunrise";
+}
+
+a[aria-current="page"]:where(:hover) {
+  color: var(--nav-color-accent);
+}
+
+[aria-current="page"] {
+  background-color: var(--nav-color-dark);
+  color: var(--nav-color-light);
+  font-family: "Blackout Midnight";
+}
+
+/* For light on dark background:
+[aria-current="page"] {
+  background-color: var(--nav-color-light);
+  color: var(--nav-color-dark);
+}
+*/
+
+@media screen and (max-width: 315px) {
+  nav a {
+    border: none;
+  }
+  h1 {
+    font-size: 2.5rem;
+    padding-bottom: var(padding-tertiary)
+  }
+}
