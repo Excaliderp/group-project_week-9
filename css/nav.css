@@ -78,6 +78,5 @@ a[aria-current="page"]:where(:hover) {
   }
   h1 {
     font-size: 2.5rem;
-    padding-bottom: var(padding-tertiary)
   }
 }

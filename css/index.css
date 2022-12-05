@@ -2,6 +2,10 @@ html {
     height: 100vh;
 }
 
+* { 
+    box-sizing: border-box;
+}
+
 body {
     background-color: #6A8E7F;
     display: flex; 
@@ -10,9 +14,36 @@ body {
     margin: 0; 
 }
 
-header {
+header,
+footer {
+    padding: 24px;
     width: 100%;
+    background-color: azure;
 }
 
+main {
+display: flex;
+    flex: 1;
+    
+    
+}
+
+.sidebar {
+    max-width: 25%;
+    background-color: aqua;
+    padding: 48px;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.animal {
+    background-color: blueviolet;
+}
+
+
+
+/* .body { display: grid; grid-template: 1fr 4fr 4fr 1fr / 2fr 7fr 2fr; grid-template-areas: "header-left header-mid header-right" "left-sidebar main right-sidebar" "left-sidebar main right-sidebar" "footer footer footer"; } */
 
 
