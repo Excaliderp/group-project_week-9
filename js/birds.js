@@ -24,6 +24,6 @@ document.getElementById("show-emu").onclick = function() {
 };
 
 function showAnimal(animal) {
-	document.getElementById("animal-info").innerHTML = "<img src='../img/" + animal.largeImage + "' height='300' width='400'><h2>" + animal.animalName + " Info</h2><p>Group: " + animal.group + "</p><p>Eats " + animal.food + " and lives in " + animal.livingArea + ".</p>";
+	document.getElementById("animal-info").innerHTML = "<img src='../img/" + animal.largeImage + "' height='300' width='400'><h2>" + animal.animalName + " Info</h2><p>Group: " + animal.group + "</p><p>Eats " + animal.food + " and lives in " + animal.livingArea + ".</p><p>The " + animal.animalName.toLowerCase() + " is about " + animal.height + " tall and weighs around " + animal.weight + ". It lives to be around " + animal.lifeSpan + ".</p><p>" + animal.description + "</p>";
 }
 
