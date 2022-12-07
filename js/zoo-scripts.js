@@ -1,8 +1,4 @@
-window.onload = function() {
-	document.getElementById("bird-info").innerHTML = welcomeBirds;
-	document.getElementById("reptile-info").innerHTML = welcomeReptiles;
-	document.getElementById("mammal-info").innerHTML = welcomeMammals;
-}
+let birdArray = [cassowary, cockatoo, emu];
 
 let welcomeBirds = "<h2>Learn more about our birds</h2><p>Click to see more about any of our amazing birds.</p>";
 let welcomeReptiles = "<h2>Learn more about our reptiles</h2><p>Click to see more about any of our amazing reptiles.</p>";
@@ -30,30 +26,18 @@ let cassowary = new Animals("Cassowary", "bird", "fruit, grass seeds, fungi, inv
 let gecko = new Animals("Gecko", "reptile", "crickets, spiders, small rodents and grasshoppers", "LITEN BILD", "STOR BILD", "18 to 20cm", "50 to 70 grams", "15 years", "semi-desert areas", "Geckos are unique among lizards for their vocalisations, which differ from species to species. Most geckos in the family Gekkonidae use chirping or clicking sounds in their social interactions. Tokay geckos (Gekko gecko) are known for their loud mating calls, and some other species are capable of making hissing noises when alarmed or threatened. They are the most species-rich group of lizards, with about 1,500 different species worldwide.The New Latin gekko and English 'gecko' stem from the Indonesian-Malay gēkoq, which is imitative of sounds that some species make. All geckos, except species in the family Eublepharidae lack eyelids; instead, the outer surface of the eyeball has a transparent membrane, the cornea. They have a fixed lens within each iris that enlarges in darkness to let in more light. Since they cannot blink, species without eyelids generally lick their own corneas when they need to clear them of dust and dirt, in order to keep them clean and moist.");
 
 
-
+//onclick birds
 document.getElementById("show-cockatoo").onclick = function() {
 	showAnimal(cockatoo)
 };
-
 document.getElementById("show-emu").onclick = function() {
-	//document.getElementById("animal-info").classList.add(emu.animalName.toLowerCase());
 	showAnimal(emu)
 };
-
 document.getElementById("show-cassowary").onclick = function() {
-	//document.getElementById("animal-info").classList.add(emu.animalName.toLowerCase());
 	showAnimal(cassowary)
 };
 
-document.getElementById("show-gecko").onclick = function() {
-	showAnimal(gecko)
-};
-document.getElementById("show-python").onclick = function() {
-	showAnimal(python)
-};
-document.getElementById("show-sea-turtle").onclick = function() {
-	showAnimal(seaTurtle)
-};
+//onclick mammals
 document.getElementById("show-kangaroo").onclick = function() {
 	showAnimal(kangaroo)
 };
@@ -64,16 +48,18 @@ document.getElementById("show-tasmanian-devil").onclick = function() {
 	showAnimal(tasmanianDevil)
 };
 
-
+//onclick reptiles
+document.getElementById("show-gecko").onclick = function() {
+	showAnimal(gecko)
+};
+document.getElementById("show-python").onclick = function() {
+	showAnimal(python)
+};
+document.getElementById("show-sea-turtle").onclick = function() {
+	showAnimal(seaTurtle)
+};
 
 function showAnimal(animal) {
-	/*
-	if (document.getElementById("animal-info").classList.contains(animal.animalName.toLowerCase())) {
-		document.getElementById("animal-info").removeAttribute("class");
-		document.getElementById("animal-info").innerHTML = welcomeBirds;
-	} else {
-		*/
 	document.getElementById("animal-info").innerHTML = "<img src='../img/" + animal.largeImage + "' height='300' width='400'><h2>" + animal.animalName + " Info</h2><p>Group: " + animal.group + "</p><p>Eats " + animal.food + " and lives in " + animal.livingArea + ". The " + animal.animalName.toLowerCase() + " is about " + animal.height + " tall and weighs around " + animal.weight + ". It lives to be around " + animal.lifeSpan + ".</p><p>" + animal.description + "</p>";
-	//}
 }
 
