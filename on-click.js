@@ -1,5 +1,5 @@
 
-let tabs = Array.from(document.getElementsByClassName("tab"));
+let tabs = Array.from(document.getElementsByClassName("nav-container"));
 
 tabs.forEach(function(tab) {
   tab.addEventListener("mouseenter", displayAnimal);
